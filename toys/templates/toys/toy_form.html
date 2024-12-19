@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добавить/Редактировать игрушку</title>
+</head>
+<body>
+    <h1>{{ form.instance.pk|yesno:"Редактировать игрушку,Добавить игрушку" }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Сохранить</button>
+    </form>
+    <a href="/toys/">Назад к списку игрушек</a>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ toy.name }}</h1>
+<p>Price: ${{ toy.price }}</p>
+<p>Origin: {{ toy.origin }}</p>
+<a href="{% url 'toy_edit' toy.pk %}">Edit</a>
+<a href="{% url 'toy_list' %}">Back to list</a>
+{% endblock %}
+

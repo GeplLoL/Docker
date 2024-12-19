@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toystore Home Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+<style>
+        /* Вставьте содержимое style.css сюда */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #007bff;
+            padding: 10px;
+            color: white;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .toy-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #ffffff;
+            border-radius: 5px;
+        }
+
+        .toy-card h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .toy-card p {
+            margin: 5px 0;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Toystore!</h1>
+    </header>
+
+    <div class="container">
+        <h2>Our Collection</h2>
+        
+        <div class="toy-card">
+            <img src="{% static 'images/toy_car.jpg' %}" alt="Toy Car">
+            <h3>Toy Car</h3>
+            <p>A fun toy car for your little one. It's fast, bright, and sure to bring lots of joy.</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="toy-card">
+            <img src="{% static 'images/doll.jpg' %}" alt="Doll">
+            <h3>Lovely Doll</h3>
+            <p>This cute doll is a perfect gift for any child. Soft, cuddly, and full of personality.</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="toy-card">
+            <img src="{% static 'images/lego_set.jpg' %}" alt="Lego Set">
+            <h3>Lego Set</h3>
+            <p>A creative Lego set that will challenge and entertain children for hours on end.</p>
+            <button>Buy Now</button>
+        </div>
+
+        <h2>Upcoming Sales</h2>
+        <table border="1" cellpadding="10">
+            <tr>
+                <th>Sale Name</th>
+                <th>Date</th>
+                <th>Discount</th>
+            </tr>
+            <tr>
+                <td>Holiday Sale</td>
+                <td>December 15 - December 25</td>
+                <td>Up to 50% Off</td>
+            </tr>
+            <tr>
+                <td>Summer Special</td>
+                <td>June 1 - June 10</td>
+                <td>Buy One Get One Free</td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        <p>Follow us on social media!</p>
+        <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+    </footer>
+</body>
+</html>
